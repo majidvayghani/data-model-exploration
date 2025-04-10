@@ -1,0 +1,16 @@
+services:
+  db:
+    container_name: 'postgresql'
+    image: postgres:16-alpine
+    restart: always
+    environment:
+      POSTGRES_DB: ${DATABASE_NAME}
+      POSTGRES_USER: ${DATABASE_USER}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432" # i use 5432 on my local for another project.
+
+volumes:
+  postgres_data:
