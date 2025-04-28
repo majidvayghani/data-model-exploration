@@ -2,10 +2,10 @@ import psycopg2
 import os
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
+# Load environment variables
 load_dotenv(dotenv_path='../.env')
 
-# Get the database credentials from environment variables
+# Get database credentials
 DATABASE_NAME = os.getenv('DATABASE_NAME')
 DATABASE_USER = os.getenv('DATABASE_USER')
 DATABASE_PASSWORD = os.getenv('DATABASE_PASSWORD')  
@@ -21,20 +21,32 @@ try:
         host=DATABASE_HOST,
         port=DATABASE_PORT
     )
-    print("Connection to the database was successful!")
-
-    # Create a cursor to interact with the database
+    connection.autocommit = False  # Optional: To automatically save changes
     cursor = connection.cursor()
 
-    # Example query: Check the version of the database
-    cursor.execute("SELECT version();")
-    db_version = cursor.fetchone()
-    print(f"Database version: {db_version[0]}")
+    print("Connected to the database. You can now execute queries.")
+    print("Type 'exit' to close the connection.")
 
-    # Close the cursor and connection
+    # Interactive query execution
+    while True:
+        query = input("SQL> ").strip()
+        if query.lower() == 'exit':
+            break
+        try:
+            cursor.execute(query)
+
+            if cursor.description:
+                results = cursor.fetchall()
+                for row in results:
+                    print(row)
+            else:
+                print("Query executed successfully.")
+        except Exception as query_error:
+            print(f"Error executing query: {query_error}")
+
     cursor.close()
     connection.close()
+    print("Connection closed.")
 
-except Exception as error:
-    print(f"Error: {error}")
-
+except Exception as conn_error:
+    print(f"Error connecting to the database: {conn_error}")
