@@ -9,6 +9,7 @@ services:
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./postgresql/schema.sql:/schema.sql 
     ports:
       - "5433:5432" # i use 5432 on my local for another project.
 
