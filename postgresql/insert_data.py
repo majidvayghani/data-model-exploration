@@ -1,10 +1,8 @@
-# insert_data.py
 import psycopg2
 import os
 import json
 from dotenv import load_dotenv
 
-# Load environment variables
 load_dotenv(dotenv_path='../.env')
 
 # Database credentials
@@ -125,7 +123,7 @@ for token in data['tokens']:
         token["updated_at"]
     ))
 
-print("✅ Data inserted successfully.")
+print("Data inserted successfully.")
 
 # Close connection
 cursor.close()

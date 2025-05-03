@@ -1,4 +1,3 @@
-# generate_data.py
 import uuid
 import random
 import json
@@ -7,11 +6,11 @@ from faker import Faker
 
 faker = Faker()
 
-# Helper function to generate random datetime
+# generate random datetime
 def random_timestamp():
     return (datetime.now() - timedelta(days=random.randint(0, 1000))).isoformat()
 
-# Generate users
+# Generate random users
 users = []
 for _ in range(5):
     user_id = str(uuid.uuid4())
@@ -27,7 +26,7 @@ for _ in range(5):
         "updated_at": datetime.now().isoformat()
     })
 
-# Generate profiles
+# Generate random profiles
 profiles = []
 for user in users:
     profiles.append({
@@ -39,7 +38,7 @@ for user in users:
         "updated_at": datetime.now().isoformat()
     })
 
-# Generate categories
+# Generate random categories
 categories = []
 for _ in range(5):
     categories.append({
@@ -51,7 +50,7 @@ for _ in range(5):
         "updated_at": datetime.now().isoformat()
     })
 
-# Generate transactions
+# Generate random transactions
 transactions = []
 for _ in range(20):
     transactions.append({
@@ -66,7 +65,7 @@ for _ in range(20):
         "updated_at": datetime.now().isoformat()
     })
 
-# Generate tokens
+# Generate random tokens
 tokens = []
 for user in users:
     tokens.append({
@@ -79,7 +78,7 @@ for user in users:
         "updated_at": datetime.now().isoformat()
     })
 
-# Pack everything
+# Pack random everything
 data = {
     "users": users,
     "profiles": profiles,
@@ -92,5 +91,5 @@ data = {
 with open('generated_data.json', 'w') as f:
     json.dump(data, f, indent=4)
 
-print("✅ Data generated and saved to generated_data.json")
+print("Data generated and saved to generated_data.json")
 
