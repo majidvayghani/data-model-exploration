@@ -1,0 +1,13 @@
+
+    {
+      "_id": "UUID",
+      "user_id": "UUID",
+      "is_active": "Boolean",
+      "token": "String",
+      "expired_at": "ISODate",
+      "created_at": "ISODate",
+      "updated_at": "ISODate",
+      "soft_deleted_at": "ISODate",
+      "hard_deleted_at": "ISODate"
+    }
+    

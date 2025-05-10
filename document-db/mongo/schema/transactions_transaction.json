@@ -1,0 +1,15 @@
+
+    {
+      "_id": "UUID",
+      "user_id": "UUID",
+      "category_id": "UUID",
+      "date": "ISODate",
+      "amount": "Decimal",
+      "description": "String",
+      "tag": "String",
+      "created_at": "ISODate",
+      "updated_at": "ISODate",
+      "soft_deleted_at": "ISODate",
+      "hard_deleted_at": "ISODate"
+    }
+    
