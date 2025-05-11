@@ -1,0 +1,12 @@
+[
+  {
+    "_id": "ca9f5f9a-2156-4bb5-812f-92f6d2f8fda9",
+    "name": "Salary",
+    "parent": null,
+    "category_type": "income",
+    "created_at": "2025-04-01T10:00:00Z",
+    "updated_at": "2025-05-01T10:00:00Z",
+    "soft_deleted_at": null,
+    "hard_deleted_at": null
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {
+    "_id": "43ae12e2-88ab-4f63-ae0f-b99f3cf8ed88",
+    "users_id": "34fc1d8e-93a2-4e13-9ebf-ef5fddf96215",
+    "categories_id": "ca9f5f9a-2156-4bb5-812f-92f6d2f8fda9",
+    "date": "2025-05-10T00:00:00Z",
+    "amount": 1200.50,
+    "description": "Monthly salary",
+    "tag": "job",
+    "created_at": "2025-05-01T10:00:00Z",
+    "updated_at": "2025-05-01T10:00:00Z",
+    "soft_deleted_at": null,
+    "hard_deleted_at": null
+  }
+]
