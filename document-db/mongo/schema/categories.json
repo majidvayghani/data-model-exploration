@@ -1,0 +1,15 @@
+
+    {
+      "_id": "UUID",
+      "name": "String",
+      "parent": {
+        "_id": "UUID",
+        "name": "String"
+      },
+      "category_type": "'income' | 'expense'",
+      "created_at": "ISODate",
+      "updated_at": "ISODate",
+      "soft_deleted_at": "ISODate",
+      "hard_deleted_at": "ISODate"
+    }
+    

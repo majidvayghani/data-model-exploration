@@ -1,10 +1,12 @@
 
     {
       "_id": "UUID",
-      "user_id": "UUID",
-      "is_active": "Boolean",
-      "token": "String",
-      "expired_at": "ISODate",
+      "users_id": "UUID",
+      "categories_id": "UUID",
+      "date": "ISODate",
+      "amount": "Decimal",
+      "description": "String",
+      "tag": "String",
       "created_at": "ISODate",
       "updated_at": "ISODate",
       "soft_deleted_at": "ISODate",

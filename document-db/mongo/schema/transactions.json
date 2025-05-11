@@ -1,8 +1,8 @@
 
     {
       "_id": "UUID",
-      "user_id": "UUID",
-      "category_id": "UUID",
+      "users_id": "UUID",
+      "categories_id": "UUID",
       "date": "ISODate",
       "amount": "Decimal",
       "description": "String",
